@@ -1,0 +1,303 @@
+.container{
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.wrapper{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+
+.wrapper>img{
+    width: 28rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.blueCircle{
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    z-index: -99;
+    background: linear-gradient(135.74deg, #0bb5ff 14.09%, #6dd3fe 83.81%);
+}
+
+.cart2{
+    position: absolute;
+    bottom: 25%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart2>svg{
+    box-sizing: border-box;
+    width: 65px;
+    height: 65px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid var(--black);
+    cursor: pointer;
+    transition: border .1s ease;
+}
+.cart2>svg:hover{
+    border: 8px solid var(--black);
+}
+
+.singup{
+    display: flex;
+    align-items: center;
+    background: white;
+    gap: 1rem;
+    font-size: 0.8rem;
+    border-radius: 13px;
+    padding: 10px;
+    box-shadow: var(--shadow1);
+}
+
+.singup>:first-child{
+    width: 7rem;
+}
+
+.singup>:nth-child(2){
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .1s ease;
+}
+
+.singup>:nth-child(2):hover{
+    background: black ;
+    color: white;
+}
+
+.h_sides{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.text1{
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    width: min-content;
+    display: block;
+    font-weight: 600;
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    color: black;
+}
+
+.text2>:nth-child(1){
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+
+.text2>:nth-child(2){
+    display: block;
+}
+
+.traffic{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.traffic>:first-child{
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+
+.customer{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.customer>:first-child{
+    font-weight: 800;
+    font-size: 2.3rem;
+    text-align: right;
+}
+
+@media screen and (max-width: 856px) {
+    .text1, .text2>span:nth-of-type(2){
+        font-size: .9rem;
+        text-align: justify;
+    }
+
+    .text2>span:nth-of-type(1),
+    .traffic>span:nth-child(1),
+    .customer>span:nth-child(1){
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .blueCircle{
+        position: absolute;
+        width: 65%;
+        height: 100%;
+    }
+
+    .wrapper>img{
+        width: 65%;
+        height: 100%;
+    }
+/* con el grip-template-are,   se dividio en dos area tipo fila o row
+    siempre tiene que llever 3 fracciones, en este caso el left, right o
+    center actuan como 1fr cada uno
+    luego en cada hijo se especifica con grid-area cual es el area que va a tomar
+    y ya cada hijo es libre de escoger el tipo de display que desee */
+    .container{
+        grid-template-areas: 'left center center' 'right right right';
+    }
+
+    .container>:nth-child(1){
+        grid-area: left;
+        grid-template-rows: none;
+        gap: 7rem;
+    }
+
+    .container>:nth-child(2){
+        grid-area: center;
+    }
+
+    .container>:nth-child(3){
+        grid-area: right;
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0rem;
+    }
+
+    .singup{
+        gap: 1rem;
+        font-size: 0.6rem;
+        border-radius: 13px;
+        padding: 8px;
+    }
+    
+    .singup>:first-child{
+        width: 5rem;
+    }
+    
+    .singup>:nth-child(2){
+        width: 13px;
+        height: 13px;
+    }
+
+    .cart2{
+        bottom: 20%;
+        right: 2%;
+        gap: .6rem;
+    }
+    
+    .cart2>svg{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid var(--black);
+    }
+    .cart2>svg:hover{
+        border: 5px solid var(--black);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .text1>span:nth-of-type(2){
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .text2>span:nth-of-type(1),
+    .traffic>span:nth-child(1),
+    .customer>span:nth-child(1){
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .blueCircle{
+        position: absolute;
+        width: 75%;
+        height: 75%;
+        top: 16%;
+    }
+
+    .wrapper>img{
+        width: 75%;
+        height: 75%;
+        top: 16%;
+    }
+/* con el grip-template-are,   se dividio en dos area tipo fila o row
+    siempre tiene que llever 3 fracciones, en este caso el left, right o
+    center actuan como 1fr cada uno
+    luego en cada hijo se especifica con grid-area cual es el area que va a tomar
+    y ya cada hijo es libre de escoger el tipo de display que desee */
+    .container{
+        grid-template-areas: 'left center center' 'right right right';
+    }
+
+    .container>:nth-child(1){
+        grid-area: left;
+        grid-template-rows: none;
+        gap: 7rem;
+    }
+
+    .container>:nth-child(2){
+        grid-area: center;
+    }
+
+    .container>:nth-child(3){
+        grid-area: right;
+        display: flex;
+        justify-content: space-around;
+        margin: 2rem 0rem;
+    }
+
+    .singup{
+        gap: 1rem;
+        font-size: 0.6rem;
+        border-radius: 13px;
+        padding: 8px;
+    }
+    
+    .singup>:first-child{
+        width: 5rem;
+    }
+    
+    .singup>:nth-child(2){
+        width: 13px;
+        height: 13px;
+    }
+
+    .cart2{
+        bottom: 10%;
+        right: 2%;
+        gap: .6rem;
+    }
+    
+    .cart2>svg{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid var(--black);
+    }
+    .cart2>svg:hover{
+        border: 5px solid var(--black);
+    }
+}

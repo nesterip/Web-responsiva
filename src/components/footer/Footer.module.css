@@ -1,0 +1,95 @@
+.footerWrapper{
+    margin-top: 4rem;
+}
+
+.footerWrapper>hr{
+    background: white;
+    border: none;
+    height: 1px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.6rem;
+}
+
+
+.iconMin{
+    width: 1.3rem;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .4rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.logo>img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.itemFooters{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.itemFooters>span{
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: wavy;
+    font-style: italic;
+}
+
+.itemFooters>:nth-child(1){
+    font-size: 1.3rem;
+    font-style: normal;
+}
+
+.copyRight{
+    display: flex;
+    font-size: 0.6rem;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: .3rem;
+}
+
+@media screen and (max-width:768px) {
+    .footer{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .logo{
+        display: none;
+    }
+
+    .footer{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        gap: 1rem;
+    }
+
+    .itemFooters{
+        gap: 1rem;
+    }
+    
+    .itemFooters>span{
+        gap: .7rem;
+    }
+}
+
