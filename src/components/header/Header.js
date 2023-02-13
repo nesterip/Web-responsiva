@@ -3,12 +3,12 @@ import css from './Header.module.css';
 import Logo from '../../assets/logo.png';
 import {CgShoppingBag} from 'react-icons/cg';
 import {GoThreeBars} from 'react-icons/go';
-import {motion} from 'framer-motion';
+//import {motion} from 'framer-motion';
 
 const Header = () => {
 
     //animacion propiedad
-    const transition = {duration: 3, type: "spring"};
+    //const transition = {duration: 3, type: "spring"};
 
     //muestra o no el menu del header (usada para pantallas moviles)
     const [showMenu, setShowMenu] = useState(true);
